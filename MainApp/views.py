@@ -48,7 +48,22 @@ def get_item(request, item_id: int):
         if item['id'] == item_id:
             result = f""" 
             <h2>Имя: {item["name"]}</h2>
-            <p>Количество: {item['quantity']}</p>  
+            <p>Количество: {item['quantity']}</p> 
+            <p> <a href="/items"> Назад к списку товаров</a></p> 
             """
             return HttpResponse(result)
     return HttpResponseNotFound(f'Item with id={item_id} not found')
+
+
+# <ol>
+#   <li> ... </li>
+#   <li> ... </li>
+#   <li> ... </li>
+# </ol>
+
+def get_items(request):
+    result = "<h2>Список товаров</h2><ol>"
+    for item in items:
+        result += f"""<li><a href="/item/{item['id']}"> {item["name"]} </a></li>"""
+    result += "</ol>"
+    return HttpResponse(result)
