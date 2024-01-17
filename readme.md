@@ -13,3 +13,11 @@
 
 ## Запуск терминала в контексте django
 `python manage.py shell_plus --ipython`
+
+
+## Выгрузка и загрузка данных из БД
+Выгрузка данных:  
+`python manage.py dumpdata MainApp --indent 4 > ./datasets/items.json`
+
+Загрузка данных:  
+`python manage.py loaddata ./datasets/items.json`
