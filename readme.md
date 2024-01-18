@@ -11,7 +11,7 @@
 
 5. `python manage.py runserver`
 
-## Запуск терминала в контексте django
+## Запуск терминала в контексте **django**
 `python manage.py shell_plus --ipython`
 
 
