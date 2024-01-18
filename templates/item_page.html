@@ -11,9 +11,10 @@
     
     <h1>{{ item.name }} </h1>
     <div>
-        {% if item.quantity == 0 %} Товар отсутствует
-        {% else %} Количество: {{ item.quantity }}
-        {% endif %}
+        Производитель: {{ item.brand }}
+    </div>
+    <div>
+        Количество: {{ item.count | default:"Товар отсутствует на складе"}}
     </div>
     <br>
     <a href="/items"> Назад к списку товаров</a>
