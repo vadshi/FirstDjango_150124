@@ -16,8 +16,11 @@
 
 
 ## Выгрузка и загрузка данных из БД
-Выгрузка данных:  
+Выгрузка данных для приложения MainApp:  
 `python manage.py dumpdata MainApp --indent 4 > ./datasets/items.json`
+
+Выгрузка данных из таблицы:  
+`python manage.py dumpdata MainApp.item --indent 4 > ./datasets/items.json`
 
 Загрузка данных:  
 `python manage.py loaddata ./datasets/items.json`
